@@ -49,6 +49,7 @@ en:
       new_task: 'New task'
       clear_all_done: 'Clear all done'
       login_to: 'Login to create, edit and delete songs'
+      not_your: "Not your task"
 
     index_deadline:
       head: 'Tasks by deadlines'
@@ -108,6 +109,7 @@ en:
       new_task: 'New task'
       clear_all_done: 'Clear all done'
       login_to: 'Login to create, edit and delete tasks'
+      login_to_admin: 'Login like admin to create, edit and delete tasks'
       delete_all_done: 'Delete forever'
       empty: 'The list is empty'
       completed_at: 'Transfered at'
@@ -128,10 +130,11 @@ en:
       not_done: 'Not'
       new_task: 'New task'
       clear_all_done: 'Clear all done'
-      login_to: 'Login to create, edit and delete tasks'
+      login_to: 'Login to create, edit and delete tasks'      
       added_at: 'Added at'
       status?: 'Done?'
       hidden?: 'Hidden?'
+      not_your: "Not your task"
 
     form:
       submit: '%{action}'
@@ -157,6 +160,8 @@ en:
     new:
       head: 'New task'
       back: 'Home'
+      login_to: 'Login to create, edit and delete tasks'      
+
 
   layouts:
     application:
