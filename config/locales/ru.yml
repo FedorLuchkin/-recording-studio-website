@@ -125,6 +125,21 @@ ru:
       hidden?: 'Скрыто?'
       not_your: "Не ваша задача"
 
+    index_your:
+      head: 'Ваши заказы'
+      subj: 'Группа'
+      hometask: 'Песня'
+      deadline: 'Дедлайн'
+      actions: 'Действия'
+      completed: 'Готово?'
+      show: 'См.'
+      edit: 'Изм.'
+      delete: 'Удалить'
+      done: 'Да!'
+      not_done: 'Нет'
+      login_to: 'Зарегистрируйтесь, чтобы воспользоваться всеми функциями'
+      not_your: "Не ваша задача"
+
     form:
       submit: '%{action}'
       create: 'Создать'
