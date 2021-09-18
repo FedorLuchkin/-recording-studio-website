@@ -26,6 +26,7 @@ class Task < ApplicationRecord
   private
   def set_defaults
     self.hidden = false if self.new_record?
+    self.status = false if self.new_record?
     #self.status = false if self.new_record?
     #self.deadline = Date.today if self.new_record?
   end

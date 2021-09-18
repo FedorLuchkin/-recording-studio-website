@@ -25,11 +25,18 @@
       </div>
 
       <div class="input-group-prepend">
-        <%= form.label :Completed?, class: "input-group-text" %>
-        <%= form.check_box :status, class: "form-check ml-3 mr-3" %>
+        <% if user_signed_in? && current_user.admin? %>
+          <%= form.label :Completed?, class: "input-group-text" %>        
+          <%= form.check_box :status, class: "form-check ml-3 mr-3" %>
+        <%end%>
         <div class="input-group">
-          <%= form.label :Deadline, class: "input-group-text col-md-5" %>
-          <%= form.date_select :deadline %>
+          <% if user_signed_in? && current_user.admin? %>
+            <%= form.label :Deadline, class: "input-group-text col-md-5" %>
+            <%= form.date_select :deadline %>
+          <%else%>
+            <%= form.label :Deadline, class: "input-group-text col-md-5 mr-3" %>
+            <%= form.date_select :deadline %>
+          <%end%>
         </div>
       </div>
 

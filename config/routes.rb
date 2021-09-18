@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     get 'tasks/index_deadline'
     get 'tasks/index_cleared'
     get 'tasks/index_all'
+    get 'tasks/index_your'
 
     resources :tasks do
       put :complete, on: :member

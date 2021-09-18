@@ -48,8 +48,9 @@ en:
       not_done: 'Not'
       new_task: 'New task'
       clear_all_done: 'Clear all done'
-      login_to: 'Login to create, edit and delete songs'
+      login_to: 'Login to create, edit and delete tasks'
       not_your: "Not your task"
+
 
     index_deadline:
       head: 'Tasks by deadlines'
@@ -72,6 +73,7 @@ en:
       new_task: 'New task'
       clear_all_done: 'Clear all done'
       login_to: 'Login to create, edit and delete tasks'
+      not_your: "Not your task"
 
 
     index_subj:
@@ -91,6 +93,8 @@ en:
       new_task: 'New task'
       clear_all_done: 'Clear all done'
       login_to: 'Login to create, edit and delete tasks'
+      empty: 'The list is empty'
+      not_your: "Not your task"
 
 
     index_cleared:
@@ -136,6 +140,21 @@ en:
       hidden?: 'Hidden?'
       not_your: "Not your task"
 
+    index_your:
+      head: 'Your tasks'
+      subj: 'Band'
+      hometask: 'Song'
+      deadline: 'Deadline'
+      actions: 'Actions'
+      completed: 'Done!'
+      show: 'Show'
+      edit: 'Edit'
+      delete: 'Delete'
+      done: 'Yes!'
+      not_done: 'Not'
+      login_to: 'Login to create, edit and delete tasks'
+      not_your: "Not your task"
+
     form:
       submit: '%{action}'
       create: 'Create'
@@ -170,6 +189,7 @@ en:
       nav_3: 'By deadlines'
       nav_4: 'Cleared'
       nav_5: 'ALL'
+      nav_6: 'Your tasks'
       today_date: 'Today is'
       lang: 'Language'
       login: 'Login'

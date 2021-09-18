@@ -26,9 +26,9 @@
         <tr class="task">
           <th scope="row"><p><%= num += 1%></p></th>
           <td><p><%= task.subj  %></p></td>
-          <td><pre><%= task.descript %></pre></td>
+          <td><p><%= task.descript %></p></td>
           <td class="action "><p><%= task.deadline %></p></td>
-          <td><p><%= task.updated_at.in_time_zone('Moscow').strftime("%FT%T")  %></p></td>
+          <td><p><%= task.updated_at.in_time_zone('Moscow').strftime("%F_%T")  %></p></td>
           <td><%= link_to "#{t('.edit')}", edit_task_path(task), class: "btn btn-outline-warning btn-sm #{activity_btn}" %></td>
           <td><%= link_to "#{t('.return')}", return_done_task_path(task), method: :put, class: "btn btn-outline-primary btn-sm #{activity_btn}" %></td>
           <td><%= link_to "#{t('.delete')}", task, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm #{activity_btn}" %></td>
@@ -37,7 +37,7 @@
       </tbody>
     </table>
   <% else %>
-    <p class="alert alert bg-dark text-warning col-md-3"><%= "#{t('.login_to_admin')}" %></p>
+    <p class="alert alert bg-dark text-warning col-md-3 ml-1"><b><%= t('.login_to_admin') %></b></p>
     <% activity_btn = 'disabled' %>
   <% end %>
 </div>

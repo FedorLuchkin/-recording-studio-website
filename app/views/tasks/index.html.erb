@@ -62,7 +62,7 @@
     <tr class="task">
       <th scope="row"><p style="color:<%= color %>"><%= num += 1%></p></th>
       <td class="text-center"><p style="color:<%= color %>"><u><%= task.subj  %></u></p></td>
-      <td class="text-center"><pre style="color:<%= color %>"> <%= task.descript %></pre></td>
+      <td class="text-center"><p style="color:<%= color %>"> <%= task.descript %></p></td>
       <% if user_signed_in? && current_user.admin? %>
         <td class="text-center"><p class="<%=stilyok%>" style="color:<%= color %>"><%= task.deadline %></p></td>
       <%else%>
@@ -104,7 +104,7 @@
     <tr class="task">
       <th scope="row"><p style="color:#1f39fb"><%= num += 1%></p></th>
       <td class="text-center"><p style="color:#1f39fb"><s><%= task.subj  %></s></p></td>
-      <td class="text-center"><pre style="color:#1f39fb"><s><%= task.descript %></s></pre></td>
+      <td class="text-center"><p style="color:#1f39fb"><s><%= task.descript %></s></p></td>
       <% if user_signed_in? && current_user.admin? %>
         <td class="text-center"><p style="color:#1f39fb"><s><%= task.deadline %></s></p></td>
       <%else%>

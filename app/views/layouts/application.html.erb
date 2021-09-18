@@ -25,6 +25,9 @@
           <%= link_to "#{t('.nav_2')}", tasks_index_subj_path(@tasks), method: :get, class: 'btn btn-outline-dark text-black', style: 'background-color: #FBB103' %>
           <%= link_to "#{t('.nav_3')}", tasks_index_deadline_path(@tasks), method: :get, class: 'btn btn-outline-dark text-black', style: 'background-color: #FBB103' %>
           <%= link_to "#{t('.nav_5')}", tasks_index_all_path(@tasks), method: :get, class: 'btn btn-outline-dark text-black', style: 'background-color: #FBB103' %>          
+          <% if user_signed_in?%>
+            <%= link_to "#{t('.nav_6')}", tasks_index_your_path(@tasks), method: :get, class: 'btn btn-outline-dark text-black', style: 'background-color: #FBB103' %>          
+          <%end%>
           <% if user_signed_in? && current_user.admin? %>
             <%= link_to "#{t('.nav_4')}", tasks_index_cleared_path(@tasks), method: :get, class: 'btn btn-outline-dark text-black', style: 'background-color: #FBB103' %>
           <%end%>

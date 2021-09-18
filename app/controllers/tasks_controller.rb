@@ -61,6 +61,13 @@ class TasksController < ApplicationController
     end
   end
 
+  def index_your
+    if user_signed_in?
+      @completed_tasks = current_user.tasks.all.where(status: true)
+      @uncompleted_tasks = current_user.tasks.all.where(status: false)
+    end
+  end
+
   # PATCH/PUT /tasks/1
   # PATCH/PUT /tasks/1.json
   def update
