@@ -154,6 +154,7 @@ en:
       not_done: 'Not'
       login_to: 'Login to create, edit and delete tasks'
       not_your: "Not your task"
+      new_task: 'New task'
 
     form:
       submit: '%{action}'

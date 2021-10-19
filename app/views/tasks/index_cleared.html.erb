@@ -1,9 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <div class="container row sticky-top mt-4" style="top: 90px">
-  <h1 class="lert alert bg-warning text-dark col-md-7 " style="height: 80px"> <%= t('tasks.index_cleared.head') %> </h1>
+  <h1 class="lert alert bg-warning text-dark col-md-10 " style="height: 80px"> <%= t('tasks.index_cleared.head') %> </h1>
   <% if user_signed_in? && current_user.admin? %>
-    <%= link_to "#{t('.delete_all_done')}", tasks_destroy_all_done_path(@tasks), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-lg col-md-3 ml-1 text-lg-center', style: 'height: 80px; width: 300px' %>
+    <%= link_to "#{t('.new_task')}", new_task_path, class: 'btn btn-success btn-lg col-md-5 ml-10 mb-3 text-lg-center', style: 'height: 60px' %>
+    <%= link_to "#{t('.delete_all_done')}", tasks_destroy_all_done_path(@tasks), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-lg col-md-5 ml-10 text-lg-center', style: 'height: 60px' %>
     <% activity_btn = '' %>
     <table class="table table-hover mb-4 col-md-10">
       <% if @cleared_tasks.count > 0 %>
@@ -14,7 +15,7 @@
             <th class="text-center" scope="col"><%= t('.hometask') %></th>
             <th class="text-center" scope="col"><%= t('.deadline') %></th>
             <th class="text-center" scope="col"><%= t('.completed_at') %></th>
-            <th colspan="3" class="text-center" scope="col"><%= t('.actions') %></th>
+            <th colspan="4" class="text-center" scope="col"><%= t('.actions') %></th>
           </tr>
         </thead>
       <% else %>
@@ -29,6 +30,7 @@
           <td><p><%= task.descript %></p></td>
           <td class="action "><p><%= task.deadline %></p></td>
           <td><p><%= task.updated_at.in_time_zone('Moscow').strftime("%F_%T")  %></p></td>
+          <td class="text-center"><%= link_to "#{t('.show')}", task, class: 'action btn btn-light btn-sm ml-4' %></td>
           <td><%= link_to "#{t('.edit')}", edit_task_path(task), class: "btn btn-outline-warning btn-sm #{activity_btn}" %></td>
           <td><%= link_to "#{t('.return')}", return_done_task_path(task), method: :put, class: "btn btn-outline-primary btn-sm #{activity_btn}" %></td>
           <td><%= link_to "#{t('.delete')}", task, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm #{activity_btn}" %></td>

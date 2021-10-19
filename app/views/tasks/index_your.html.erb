@@ -4,10 +4,11 @@
 <h1 class="alert alert bg-warning text-dark col-md-10"> <%= t('tasks.index_your.head') %> </h1>
 
 <% if user_signed_in?%>
-  <% activity_btn = '' %>
+    <%= link_to "#{t('.new_task')}", new_task_path, class: 'btn btn-success btn-lg col-md-10 ml-10 mb-3 text-lg-center', style: 'height: 60px' %>
+    <% activity_btn = '' %>
 <% else %>
-  <p class="alert alert bg-dark text-warning mb-3 col-md-10"><b><%= t('.login_to') %></b></p>
-  <% activity_btn = 'disabled' %>
+    <p class="alert alert bg-dark text-warning mb-3 col-md-10"><b><%= t('.login_to') %></b></p>
+    <% activity_btn = 'disabled' %>
 <% end %>
 <% if user_signed_in?%>
     <table class="table table-hover mb-4 col-md-10">
