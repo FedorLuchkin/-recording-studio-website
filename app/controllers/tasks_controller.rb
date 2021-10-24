@@ -73,7 +73,7 @@ class TasksController < ApplicationController
   def update
     respond_to do |format|
       if @task.update(task_params)
-        format.html { redirect_to @task, notice: 'Задача успешно бобновлена.' }
+        format.html { redirect_to @task, notice: 'Задача успешно обновлена.' }
         format.json { render :show, status: :ok, location: @task }
       else
         format.html { render :edit }
