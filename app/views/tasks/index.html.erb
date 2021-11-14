@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1 class="alert alert bg-warning text-dark col-md-10"> <%= t('tasks.index.head') %> </h1>
-<div class="container sticky-top" style="top: 70px">
+<div class="container" style="top: 70px">
   <% if user_signed_in? %>
     <div class="row">
       <% if current_user.admin? %>

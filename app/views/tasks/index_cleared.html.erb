@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<div class="container row sticky-top mt-4" style="top: 90px">
+<div class="container row mt-4" style="top: 90px">
   <h1 class="lert alert bg-warning text-dark col-md-10 " style="height: 80px"> <%= t('tasks.index_cleared.head') %> </h1>
   <% if user_signed_in? && current_user.admin? %>
     <%= link_to "#{t('.new_task')}", new_task_path, class: 'btn btn-success btn-lg col-md-5 ml-10 mb-3 text-lg-center', style: 'height: 60px' %>

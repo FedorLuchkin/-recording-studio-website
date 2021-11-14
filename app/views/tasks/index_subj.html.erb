@@ -1,8 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<div class="row  sticky-top mt-4 col-md-12" style="top: 90px">
-  <h1 class="alert alert bg-warning text-dark col-md-7" style="height: 80px"> <%= t('tasks.index_subj.head') %> </h1>
-
+<div class="container row mt-4" style="top: 90px">
+  <h1 class="alert alert bg-warning text-dark col-md-7" style="height: 80px"> <%= t('tasks.index_subj.head') %></h1>
   <% if user_signed_in? %>
     <%= link_to "#{t('.new_task')}", new_task_path, class: 'btn btn-success btn-lg col-md-3 ml-4 text-lg-center', style: 'height: 80px; width: 310px' %>
     <% activity_btn = '' %>
